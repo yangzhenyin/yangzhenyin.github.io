@@ -102,28 +102,61 @@
 
 
 
-<meta name="description" content="Ajax 编程  1、C/S结构： 是 Client 客户端 和  Server 服务端 
-在C/S结构的情况下，不同的服务需要安装不同的客户端软件，比如QQ、迅雷、Foxmail这种
-情况下安装的软件会越来越多，同时也有许多弊端，比如A出差，需要在B电脑上查收邮件，但
-是B电脑并未安装Foxmail等类似的客户端软件，这样不得不先去下载Foxmail，非常不方便。
-  2、B/S结构： 是 Br">
+<meta name="description" content="面向对象  1、面向对象和面向过程的区别：
+
+面向对象
+
+面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。
+
+
+面向过程
+
+面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。
+
+2、异常捕获
+使用 try {
+    这里面是可能发生错误的代码
+} 
+catch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ajax">
-<meta property="og:url" content="http://yoursite.com/2015/04/10/Ajax/index.html">
+<meta property="og:title" content="面向对象">
+<meta property="og:url" content="http://yoursite.com/2015/06/20/面向对象/index.html">
 <meta property="og:site_name" content="牛顿丶博客">
-<meta property="og:description" content="Ajax 编程  1、C/S结构： 是 Client 客户端 和  Server 服务端 
-在C/S结构的情况下，不同的服务需要安装不同的客户端软件，比如QQ、迅雷、Foxmail这种
-情况下安装的软件会越来越多，同时也有许多弊端，比如A出差，需要在B电脑上查收邮件，但
-是B电脑并未安装Foxmail等类似的客户端软件，这样不得不先去下载Foxmail，非常不方便。
-  2、B/S结构： 是 Br">
-<meta property="og:updated_time" content="2016-12-16T15:54:40.117Z">
+<meta property="og:description" content="面向对象  1、面向对象和面向过程的区别：
+
+面向对象
+
+面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。
+
+
+面向过程
+
+面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。
+
+2、异常捕获
+使用 try {
+    这里面是可能发生错误的代码
+} 
+catch">
+<meta property="og:updated_time" content="2016-12-16T15:54:38.527Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajax">
-<meta name="twitter:description" content="Ajax 编程  1、C/S结构： 是 Client 客户端 和  Server 服务端 
-在C/S结构的情况下，不同的服务需要安装不同的客户端软件，比如QQ、迅雷、Foxmail这种
-情况下安装的软件会越来越多，同时也有许多弊端，比如A出差，需要在B电脑上查收邮件，但
-是B电脑并未安装Foxmail等类似的客户端软件，这样不得不先去下载Foxmail，非常不方便。
-  2、B/S结构： 是 Br">
+<meta name="twitter:title" content="面向对象">
+<meta name="twitter:description" content="面向对象  1、面向对象和面向过程的区别：
+
+面向对象
+
+面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。
+
+
+面向过程
+
+面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。
+
+2、异常捕获
+使用 try {
+    这里面是可能发生错误的代码
+} 
+catch">
 
 
 
@@ -144,10 +177,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2015/04/10/Ajax/"/>
+  <link rel="canonical" href="http://yoursite.com/2015/06/20/面向对象/"/>
 
 
-  <title> Ajax | 牛顿丶博客 </title>
+  <title> 面向对象 | 牛顿丶博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +320,7 @@
             
             
               
-                Ajax
+                面向对象
               
             
           </h1>
@@ -299,8 +332,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-10T20:02:02+08:00" content="2015-04-10">
-              2015-04-10
+            <time itemprop="dateCreated" datetime="2015-06-20T01:05:32+08:00" content="2015-06-20">
+              2015-06-20
             </time>
           </span>
 
@@ -327,59 +360,112 @@
       
 
       
-        <h2 id="Ajax-编程"><a href="#Ajax-编程" class="headerlink" title="Ajax 编程"></a>Ajax 编程</h2><p>  1、C/S结构： 是 Client 客户端 和  Server 服务端 </p>
-<pre><code>在C/S结构的情况下，不同的服务需要安装不同的客户端软件，比如QQ、迅雷、Foxmail这种
-情况下安装的软件会越来越多，同时也有许多弊端，比如A出差，需要在B电脑上查收邮件，但
-是B电脑并未安装Foxmail等类似的客户端软件，这样不得不先去下载Foxmail，非常不方便。
-</code></pre><p>  2、B/S结构： 是 Browser 浏览器 和 Server 服务端 </p>
-<pre><code>解决了C/S所带来的不便，将所有的服务都可以通过浏览器来完成（因为基本所有浏览器都安
-装了浏览器），但B/S也有一些不利，比如操作稳定性、流畅度等方面相对较弱。
-</code></pre><p>  3、注：GET和POST请求方式的差异（面试题）</p>
-<pre><code>1、GET没有请求主体，使用xhr.send(null)
-2、GET可以通过在请求URL上添加请求参数
-3、POST可以通过xhr.send(&apos;name=itcast&amp;age=10&apos;)
-4、POST需要设置 xhr.setRequestHeader(&apos;Content-Type&apos;, 
-                                    &apos;application/x-www-form-urlencoded&apos;);
-5、GET效率更好（应用多）
-6、GET大小限制约4K，POST则没有限制
-</code></pre><p>  4、接口化开发</p>
-<pre><code>请求地址即所谓的接口，通常我们所说的接口化开发，其实是指一个接口对应一个功能，并且
-严格约束了请求参数和响应结果的格式，这样前后端在开发过程中，可以减少不必要的讨论，
-从而并行开发，可以极大的提升开发效率，另外一个好处，当网站进行改版后，服务端接口只
-需要进行微调。
-</code></pre><p>   5、Ajax的请求过程</p>
-<pre><code>//1. 初始化ajax内置函数
-var xhr = new XMLHttpRequest();
-
-//2. 请求头
-xhr.open(&apos;请求方式&apos;, &apos;接口地址&apos;, &apos;async&apos;);
-
-//请求方式分为get请求和post请求
-//接口地址: get请求时由接口地址和要传送的内容组成用&apos;?&apos;号和&amp;连接
-// post请求时只需要设置接口地址
-// async 为true时是异步，false是同步，默认异步
-
-//3. 设置请求头
-//只有是post请求的时候才需要设置请求头，get不需要设置
-xhr.setRequestHeader(&apos;Content-Type&apos;, &apos;application/x-www-form-urlencoded&apos;);
-
-//4. 请求主体
-//当为get请求时设置为null
-xhr.send(null);
-
-//当为post请求时设置的需要传输的内容，用&amp;连接
-xhr.send(name=牛顿);
-
-//5. 监听响应的状态readystatechange事件
-xhr.onreadystatechange = function() {
-    //判断响应是否完成用readyState,等于4时响应完成
-    //判断响应是否正常用status，等于200时响应正常
-    if (xhr.readyState ==4 &amp;&amp; xhr.status ==200) {
-        //要处理的逻辑
-    }
-
+        <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>  1、面向对象和面向过程的区别：</p>
+<ul>
+<li><p>面向对象</p>
+<ul>
+<li>面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。</li>
+</ul>
+</li>
+<li><p>面向过程</p>
+<ul>
+<li>面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。</li>
+</ul>
+<p>2、异常捕获</p>
+<p>使用 try {</p>
+<pre><code>    这里面是可能发生错误的代码
+} 
+catch(e) {
+    这里面是能够正常执行的代码
 };
-</code></pre>
+当一段代码可能发生错误，这个错误现在这个阶段没法解决，为了是后面的代码正常的运行，
+就进行异常捕获。
+</code></pre><p>3、创建对象</p>
+<ol>
+<li><p>使用 Object 构造函数创建一个对象</p>
+<p> var person = new Object();<br> person.name = ‘牛顿’;<br> person.age = 18;</p>
+</li>
+<li><p>使用对象字面量创建对象。不要奇怪person[“5”],这里是合法的；另外使用这种加括号的方式字段之间是可以有空格的如person[“my age”].</p>
+<p> var person = {</p>
+<pre><code>    name: &apos;牛顿&apos;,
+    age: 18,
+    5: &apos;test&apos;
+};
+</code></pre><p> alert(person.name);<br> alert(person[“5”]);</p>
+</li>
+<li><p>使用工厂模式创建对象,返回带有属性和方法的person对象。</p>
+<p> function createPerson(name, age,job) {</p>
+<pre><code>    var o = new Object();
+    o.name=name;
+    o.age=31;
+    o.sayName=function() {
+        alert(this.name);
+    };
+    return o;
+}
+</code></pre><p> createPerson(“kevin”,31,”se”).sayName();</p>
+</li>
+<li><p>使用自定义构造函数模式创建对象；这里注意命名规范，作为构造函数的函数首字母要大写，以区别其它函数。这种方式有个缺陷是sayName这个方法，它的每个实例都是指向不同的函数实例，而不是同一个。</p>
+<p> function Person(name, age, job) {</p>
+<pre><code>this.name = name;
+this.age = age;
+this.job = job;
+this.sayName = function () {
+    alert(this.name);
+};
+</code></pre><p> }</p>
+<p> var person = new Person(“kevin”, 31, “SE”);<br> person.sayName();</p>
+</li>
+<li><p>使用原型模式创建对象； 解决了方法4中提到的缺陷， 使不同的对象的函数（ 如sayFriends） 指向了同一个函数。 但它本身也有缺陷， 就是实例共享了引用类型friends， 从下面的代码执行结果可以看到， 两个实例的friends的值是一样的， 这可能不是我们所期望的。<br> 复制代码</p>
+<p> function Person() {</p>
+<p> }</p>
+<p> Person.prototype = {</p>
+<pre><code>constructor: Person,
+name: &quot;kevin&quot;,
+age: 31,
+job: &quot;SE&quot;,
+friends: [&quot;Jams&quot;, &quot;Martin&quot;],
+sayFriends: function () {
+    alert(this.friends);
+}
+</code></pre><p> };<br> var person1 = new Person();<br> person1.friends.push(“Joe”);<br> person1.sayFriends(); //Jams,Martin,Joe</p>
+<p> var person2 = new Person();<br> person2.sayFriends(); //James,Martin,Joe</p>
+</li>
+<li><p>组合使用原型模式和构造函数创建对象， 解决了方法5中提到的缺陷， 而且这也是使用最广泛、 认同度最高的创建对象的方法。<br> 复制代码</p>
+<p> function Person(name, age, job) {</p>
+<pre><code>this.name = name;
+this.age = age;
+this.job = job;　　
+this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
+</code></pre><p> }<br> Person.prototype.sayFriends = function () {</p>
+<pre><code>alert(this.friends);
+</code></pre><p> };<br> var person1 = new Person(“kevin”, 31, “SE”);<br> var person2 = new Person(“Tom”, 30, “SE”);<br> person1.friends.push(“Joe”);<br> person1.sayFriends(); //Jams,Martin,Joe<br> person2.sayFriends(); //Jams,Martin</p>
+<p> 复制代码</p>
+</li>
+<li><p>动态原型模式； 这个模式的好处在于看起来更像传统的面向对象编程， 具有更好的封装性， 因为在构造函数里完成了对原型创建。 这也是一个推荐的创建对象的方法。<br> 复制代码</p>
+<p> function Person(name, age, job) {</p>
+<pre><code>//属性
+this.name = name;
+this.age = age;
+this.job = job;
+this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
+//方法
+if (typeof this.sayName != &quot;function&quot;) {
+    Person.prototype.sayName = function () {
+        alert(this.name);
+    };
+
+    Person.prototype.sayFriends = function () {
+        alert(this.friends);
+    };
+}
+</code></pre><p> }</p>
+<p> var person = new Person(“kevin”, 31, “SE”);<br> person.sayName();<br> person.sayFriends();</p>
+</li>
+</ol>
+</li>
+</ul>
+
       
     </div>
 
@@ -404,16 +490,16 @@ xhr.onreadystatechange = function() {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/03/16/事件/" rel="next" title="事件">
-                <i class="fa fa-chevron-left"></i> 事件
+              <a href="/2015/05/16/CSS3和移动Web/" rel="next" title="CSS3 和移动 Web">
+                <i class="fa fa-chevron-left"></i> CSS3 和移动 Web
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/16/CSS3和移动Web/" rel="prev" title="CSS3 和移动 Web">
-                CSS3 和移动 Web <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/01/Angular/" rel="prev" title="事件">
+                事件 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -534,7 +620,7 @@ xhr.onreadystatechange = function() {
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax-编程"><span class="nav-number">1.</span> <span class="nav-text">Ajax 编程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">1.</span> <span class="nav-text">面向对象</span></a></li></ol></div>
             
           </div>
         </section>
