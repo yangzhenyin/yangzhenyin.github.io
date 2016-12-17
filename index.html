@@ -321,13 +321,14 @@
       
         
           
-            <h2 id="Angular-总结"><a href="#Angular-总结" class="headerlink" title="Angular 总结"></a>Angular 总结</h2><h3 id="1、使用场景"><a href="#1、使用场景" class="headerlink" title="1、使用场景"></a>1、使用场景</h3><pre><code>angular 主要是用来做一些单页面应用和后天管理系统，angular的缺点是里面的数据是通过动态帮顶
-接口动态创建出来的，不利于搜索引擎中的爬虫爬取到关键字的信息。
+            <h2 id="Angular-总结"><a href="#Angular-总结" class="headerlink" title="Angular 总结"></a>Angular 总结</h2><h3 id="1、使用场景"><a href="#1、使用场景" class="headerlink" title="1、使用场景"></a>1、使用场景</h3><pre><code>angular 主要是用来做一些单页面应用和后天管理系统，angular的缺点是里面的数据是通过动态
+帮顶接口动态创建出来的，不利于搜索引擎中的爬虫爬取到关键字的信息。
 </code></pre><h3 id="2、自己使用-Angular-做过-angular版的-todoList-的demo。"><a href="#2、自己使用-Angular-做过-angular版的-todoList-的demo。" class="headerlink" title="2、自己使用 Angular 做过 angular版的 todoList 的demo。"></a>2、自己使用 Angular 做过 angular版的 todoList 的demo。</h3><h3 id="3、通过锚点定位"><a href="#3、通过锚点定位" class="headerlink" title="3、通过锚点定位"></a>3、通过锚点定位</h3><pre><code>&lt;a href=&quot;#gogo&quot;&gt;定位&lt;/a&gt;  //点击上面这个 a 标签会定位到下面的那个标签的位置
 
 &lt;a name=&quot;gogo&quot;&gt;要定位的位置&lt;/a&gt;  
 </code></pre><h3 id="4、前端路由跳转"><a href="#4、前端路由跳转" class="headerlink" title="4、前端路由跳转"></a>4、前端路由跳转</h3><pre><code>1. 通过 a 标签的锚点（hash）实现前端路由 url 的跳转，实际是通过监听 hash 的改变来渲染不同
-的页面，之所以不用传统的 a 标签的 href 属性，是因为传统的 a 的标签的 href 会真的发送请求跳转页面，虽然通过注册事件也可以最终实现目的，但是太麻烦了。
+的页面，之所以不用传统的 a 标签的 href 属性，是因为传统的 a 的标签的 href 会真的发送请求跳
+转页面，虽然通过注册事件也可以最终实现目的，但是太麻烦了。
 
 2. 所谓的单页应用实际就是利用 hash 做网页内部局部内容的替换
     01. 为什么不适用传统而路径？
@@ -398,7 +399,8 @@
              DemoController_02&apos;;
         }]);
         //3. 直接获取定义好的模块，定义控制器函数
-        angular.module(&quot;DemoApp&quot;).controller(&apos;DemoController_03&apos;, [&apos;$scope&apos;, function($scope) {
+        angular.module(&quot;DemoApp&quot;).controller(&apos;DemoController_03&apos;, [&apos;$scope&apos;, 
+        function($scope) {
             //初始化数据模型成员
             $scope.num3 = &apos;直接获取定义好的模块，定义控制器函数 ====
              DemoController_03&apos;
@@ -515,8 +517,8 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
 
      Mozilla 1.0: div -&gt; body -&gt; html -&gt; document -&gt; window
 
-    （2） 捕获型事件(event capturing)：事件从最不精确的对象(document 对象)开始触发，然
-    后到最精确(也可以在窗口级别捕获事件，不过必须由开发人员特别指定)。
+    （2） 捕获型事件(event capturing)：事件从最不精确的对象(document 对象)开始触发，
+    然后到最精确(也可以在窗口级别捕获事件，不过必须由开发人员特别指定)。
 
     支持W3C标准的浏览器在添加事件时用addEventListener(event,fn,useCapture)方法，其中第
     3个参数useCapture是一个Boolean值，用来设置事件是在事件捕获时执行，还是事件冒泡时执
@@ -541,8 +543,8 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
 
     Microsoft中，p先触发，这就叫做事件冒泡。
 
-    两种事件处理顺序刚好相反。IE只支持事件冒泡，Mozilla, Opera 7 和 Konqueror两种都支持，
-    旧版本的Opera&apos;s 和 iCab两种都不支持 。
+    两种事件处理顺序刚好相反。IE只支持事件冒泡，Mozilla, Opera 7 和 Konqueror两种都
+    支持，旧版本的Opera&apos;s 和 iCab两种都不支持 。
 
     事件捕获
     当你使用事件捕获时，父级元素先触发，子级元素后触发，即div先触发，p后触发。
@@ -589,8 +591,9 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
 
 2、事件绑定：
 
- 分别是bind、live、delegate、on，对应的解除监听的函数分别是unbind、die、undelegate、off。
-  DOM事件模型最独特的性质是，文本节点也触发事件(在IE中不会)。
+ 分别是bind、live、delegate、on，对应的解除监听的函数分别是unbind、die、undelegate、
+ off。
+ DOM事件模型最独特的性质是，文本节点也触发事件(在IE中不会)。
 </code></pre>
           
         
@@ -696,8 +699,8 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
 <li>面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。</li>
 </ul>
 <p>2、异常捕获</p>
-<p>使用 try {</p>
-<pre><code>    这里面是可能发生错误的代码
+<pre><code>使用 try {
+    这里面是可能发生错误的代码
 } 
 catch(e) {
     这里面是能够正常执行的代码
@@ -710,16 +713,16 @@ catch(e) {
 <p> var person = new Object();<br> person.name = ‘牛顿’;<br> person.age = 18;</p>
 </li>
 <li><p>使用对象字面量创建对象。不要奇怪person[“5”],这里是合法的；另外使用这种加括号的方式字段之间是可以有空格的如person[“my age”].</p>
-<p> var person = {</p>
-<pre><code>    name: &apos;牛顿&apos;,
+<pre><code>var person = {
+    name: &apos;牛顿&apos;,
     age: 18,
     5: &apos;test&apos;
 };
 </code></pre><p> alert(person.name);<br> alert(person[“5”]);</p>
 </li>
 <li><p>使用工厂模式创建对象,返回带有属性和方法的person对象。</p>
-<p> function createPerson(name, age,job) {</p>
-<pre><code>    var o = new Object();
+<pre><code>function createPerson(name, age,job) {
+    var o = new Object();
     o.name=name;
     o.age=31;
     o.sayName=function() {
@@ -741,51 +744,66 @@ this.sayName = function () {
 <p> var person = new Person(“kevin”, 31, “SE”);<br> person.sayName();</p>
 </li>
 <li><p>使用原型模式创建对象； 解决了方法4中提到的缺陷， 使不同的对象的函数（ 如sayFriends） 指向了同一个函数。 但它本身也有缺陷， 就是实例共享了引用类型friends， 从下面的代码执行结果可以看到， 两个实例的friends的值是一样的， 这可能不是我们所期望的。<br> 复制代码</p>
-<p> function Person() {</p>
-<p> }</p>
-<p> Person.prototype = {</p>
-<pre><code>constructor: Person,
-name: &quot;kevin&quot;,
-age: 31,
-job: &quot;SE&quot;,
-friends: [&quot;Jams&quot;, &quot;Martin&quot;],
-sayFriends: function () {
-    alert(this.friends);
-}
-</code></pre><p> };<br> var person1 = new Person();<br> person1.friends.push(“Joe”);<br> person1.sayFriends(); //Jams,Martin,Joe</p>
-<p> var person2 = new Person();<br> person2.sayFriends(); //James,Martin,Joe</p>
-</li>
-<li><p>组合使用原型模式和构造函数创建对象， 解决了方法5中提到的缺陷， 而且这也是使用最广泛、 认同度最高的创建对象的方法。<br> 复制代码</p>
-<p> function Person(name, age, job) {</p>
-<pre><code>this.name = name;
-this.age = age;
-this.job = job;　　
-this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
-</code></pre><p> }<br> Person.prototype.sayFriends = function () {</p>
-<pre><code>alert(this.friends);
-</code></pre><p> };<br> var person1 = new Person(“kevin”, 31, “SE”);<br> var person2 = new Person(“Tom”, 30, “SE”);<br> person1.friends.push(“Joe”);<br> person1.sayFriends(); //Jams,Martin,Joe<br> person2.sayFriends(); //Jams,Martin</p>
-<p> 复制代码</p>
-</li>
-<li><p>动态原型模式； 这个模式的好处在于看起来更像传统的面向对象编程， 具有更好的封装性， 因为在构造函数里完成了对原型创建。 这也是一个推荐的创建对象的方法。<br> 复制代码</p>
-<p> function Person(name, age, job) {</p>
-<pre><code>//属性
-this.name = name;
-this.age = age;
-this.job = job;
-this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
-//方法
-if (typeof this.sayName != &quot;function&quot;) {
-    Person.prototype.sayName = function () {
-        alert(this.name);
-    };
+<pre><code>function Person() {
 
-    Person.prototype.sayFriends = function () {
-        alert(this.friends);
-    };
 }
-</code></pre><p> }</p>
-<p> var person = new Person(“kevin”, 31, “SE”);<br> person.sayName();<br> person.sayFriends();</p>
-</li>
+
+Person.prototype = {
+    constructor: Person,
+    name: &quot;kevin&quot;,
+    age: 31,
+    job: &quot;SE&quot;,
+    friends: [&quot;Jams&quot;, &quot;Martin&quot;],
+    sayFriends: function () {
+        alert(this.friends);
+    }
+};
+var person1 = new Person();
+person1.friends.push(&quot;Joe&quot;);
+person1.sayFriends(); //Jams,Martin,Joe
+
+var person2 = new Person();
+person2.sayFriends(); //James,Martin,Joe
+</code></pre></li>
+<li><p>组合使用原型模式和构造函数创建对象， 解决了方法5中提到的缺陷， 而且这也是使用最广泛、 认同度最高的创建对象的方法。<br> 复制代码</p>
+<pre><code>function Person(name, age, job) {
+    this.name = name;
+    this.age = age;
+    this.job = job;　　
+    this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
+}
+Person.prototype.sayFriends = function () {
+    alert(this.friends);
+};
+var person1 = new Person(&quot;kevin&quot;, 31, &quot;SE&quot;);
+var person2 = new Person(&quot;Tom&quot;, 30, &quot;SE&quot;);
+person1.friends.push(&quot;Joe&quot;);
+person1.sayFriends(); //Jams,Martin,Joe
+person2.sayFriends(); //Jams,Martin
+</code></pre></li>
+<li><p>动态原型模式； 这个模式的好处在于看起来更像传统的面向对象编程， 具有更好的封装性， 因为在构造函数里完成了对原型创建。 这也是一个推荐的创建对象的方法。<br> 复制代码</p>
+<pre><code>function Person(name, age, job) {
+    //属性
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
+    //方法
+    if (typeof this.sayName != &quot;function&quot;) {
+        Person.prototype.sayName = function () {
+            alert(this.name);
+        };
+
+        Person.prototype.sayFriends = function () {
+            alert(this.friends);
+        };
+    }
+}
+
+var person = new Person(&quot;kevin&quot;, 31, &quot;SE&quot;);
+person.sayName();
+person.sayFriends();
+</code></pre></li>
 </ol>
 </li>
 </ul>
@@ -1134,7 +1152,7 @@ xhr.onreadystatechange = function() {
                             <div><%=i%>:<%=list[i].value%></%=list[i].value%></%=i%></div>  
                         <%}%&gt; &lt;%}else{%="">  
                         <div>没有结果！</div>  
-                    <%}%&gt; &lt;="" script&gt;="" 1、引入template-native.js="" 2、&lt;%="" 与="" %&gt;="" 符号包裹起来的语句则为模板的逻辑表达式="" 3、&lt;%="content" %&gt;为输出表达式="" (简洁语法版)这个和="" nodejs="" 中的="" pre&gt;&lt;pre="" name="&quot;code&quot;" class="&quot;javascript&quot;&gt;&lt;script" id="&quot;test&quot;" type="&quot;text/html&quot;&gt;" {{if="" admin}}="" {{each="" list="" as="" value="" index}}="" &lt;div&gt;{{index}}:{{value}}&lt;="" div&gt;="" {{="" each}}="" {{else="" if}}="" 条件判断="" 2.="" xtpl模板，是="" 中使用的模板。="" 3.="" underscore，在这个模板中有一个="" _.template()方法，把获取到的内容用template方法转化成模板方法="" var="" templatepointfuc="_.template(templatePointContent);" *="" 生成轮播图的数据="" function="" banner()="" {="" data="[" m_img:="" &quot;images="" slide_01_640x340.jpg&quot;,="" pc_img:="" slide_01_2000x410.jpg&quot;="" },="" slide_02_640x340.jpg&quot;,="" slide_02_2000x410.jpg&quot;="" slide_03_640x340.jpg&quot;,="" slide_03_2000x410.jpg&quot;="" slide_04_640x340.jpg&quot;,="" slide_04_2000x410.jpg&quot;="" }="" ];="" （1）这个方法是通过获取模板的内容动态的生成轮播图，有数据传输="" 通过id获取到模板里面的数据="" randerhtml="function()" 获取页面窗口的宽度="" width="$(window).width();" ismobile="width" 768?="" true="" :="" false;="" 获取样式小点中的模板内容="" templatepointcontent="$(&quot;#wjs_point_box&quot;).html();" 把获取到的内容用template方法转化成模板方法="" 在模板方法中，传入数据，转化成html结构="" 如果只是用弄好的静态页面做模板动态生成，这里的括号里面不传入数据也可以动态生成="" 这里的lis只是一个json对象的变量，在动态生成轮播图的时候用到的时lis对象的date属性里面的json对象值="" templatepointhtml="templatePointFuc({lis:Data});" 渲染在页面上="" $(&quot;ol&quot;).html(templatepointhtml);="" 获取装载图片的盒子的模板内容="" templatebannercontent="$(&quot;#wjs_banner_box&quot;).html();" templatebannerfuc="_.template(templateBannerContent);" 这里使用的是lis这个变量对象中的date中的属性值，lis只是个对象变量，重要的是后面的data中的数据="" templatebannerhtml="templateBannerFuc({lis:Data," ism:ismobile});="" 通过对象属性把值传过去="" $(&quot;#wjs_banner_img_box&quot;).html(templatebannerhtml);="" };="" 刷新一次，就执行一次="" $(window).on(&quot;resize&quot;,="" function()="" randerhtml();="" }).trigger(&quot;resize&quot;);="" 这里的trigger是加载一面是强制行的就刷新一次="" <="" code=""></%}%&gt;></%}%&gt;></%></code></pre><p>   5、监听刷新事件</p>
+                    <%}%&gt; &lt;="" script&gt;="" 引入template-native.js="" &lt;%="" 与="" %&gt;="" 符号包裹起来的语句则为模板的逻辑表达式="" %&gt;为输出表达式="" (简洁语法版)这个和="" nodejs="" 中的="" pre&gt;&lt;pre="" name="&quot;code&quot;" class="&quot;javascript&quot;&gt;&lt;script" id="&quot;test&quot;" type="&quot;text/html&quot;&gt;" {{if="" admin}}="" {{each="" list="" as="" value="" index}}="" &lt;div&gt;{{index}}:{{value}}&lt;="" div&gt;="" {{="" each}}="" {{else="" if}}="" 条件判断="" 2.="" xtpl模板，是="" 中使用的模板。="" 3.="" underscore，在这个模板中有一个="" _.template()方法，把获取到的内容用template方法转化成模板方法="" var="" templatepointfuc="_.template(templatePointContent);" *="" 生成轮播图的数据="" function="" banner()="" {="" data="[" m_img:="" &quot;images="" slide_01_640x340.jpg&quot;,="" pc_img:="" slide_01_2000x410.jpg&quot;="" },="" slide_02_640x340.jpg&quot;,="" slide_02_2000x410.jpg&quot;="" slide_03_640x340.jpg&quot;,="" slide_03_2000x410.jpg&quot;="" slide_04_640x340.jpg&quot;,="" slide_04_2000x410.jpg&quot;="" }="" ];="" （1）这个方法是通过获取模板的内容动态的生成轮播图，有数据传输="" 通过id获取到模板里面的数据="" randerhtml="function()" 获取页面窗口的宽度="" width="$(window).width();" ismobile="width" 768?="" true="" :="" false;="" 获取样式小点中的模板内容="" templatepointcontent="$(&quot;#wjs_point_box&quot;).html();" 把获取到的内容用template方法转化成模板方法="" 在模板方法中，传入数据，转化成html结构="" 如果只是用弄好的静态页面做模板动态生成，这里的括号里面不传入数据也可以动态生成="" 这里的lis只是一个json对象的变量，在动态生成轮播图的时候用到的时lis对象的date属性里面的json对象值="" templatepointhtml="templatePointFuc({lis:Data});" 渲染在页面上="" $(&quot;ol&quot;).html(templatepointhtml);="" 获取装载图片的盒子的模板内容="" templatebannercontent="$(&quot;#wjs_banner_box&quot;).html();" templatebannerfuc="_.template(templateBannerContent);" 这里使用的是lis这个变量对象中的date中的属性值，lis只是个对象变量，重要的是后面的data中的数据="" templatebannerhtml="templateBannerFuc({lis:Data," ism:ismobile});="" 通过对象属性把值传过去="" $(&quot;#wjs_banner_img_box&quot;).html(templatebannerhtml);="" };="" 刷新一次，就执行一次="" $(window).on(&quot;resize&quot;,="" function()="" randerhtml();="" }).trigger(&quot;resize&quot;);="" 这里的trigger是加载一面是强制行的就刷新一次="" <="" code=""></%}%&gt;></%}%&gt;></%></code></pre><p>   5、监听刷新事件</p>
 <pre><code>//刷新一次，就执行一次
 $(window).on(&quot;resize&quot;, function() {
     randerHtml();

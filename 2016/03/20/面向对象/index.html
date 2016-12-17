@@ -138,7 +138,7 @@ catch">
     这里面是可能发生错误的代码
 } 
 catch">
-<meta property="og:updated_time" content="2016-12-17T10:22:03.434Z">
+<meta property="og:updated_time" content="2016-12-17T10:41:56.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象">
 <meta name="twitter:description" content="面向对象  1、面向对象和面向过程的区别：
@@ -372,8 +372,8 @@ catch">
 <li>面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。</li>
 </ul>
 <p>2、异常捕获</p>
-<p>使用 try {</p>
-<pre><code>    这里面是可能发生错误的代码
+<pre><code>使用 try {
+    这里面是可能发生错误的代码
 } 
 catch(e) {
     这里面是能够正常执行的代码
@@ -386,16 +386,16 @@ catch(e) {
 <p> var person = new Object();<br> person.name = ‘牛顿’;<br> person.age = 18;</p>
 </li>
 <li><p>使用对象字面量创建对象。不要奇怪person[“5”],这里是合法的；另外使用这种加括号的方式字段之间是可以有空格的如person[“my age”].</p>
-<p> var person = {</p>
-<pre><code>    name: &apos;牛顿&apos;,
+<pre><code>var person = {
+    name: &apos;牛顿&apos;,
     age: 18,
     5: &apos;test&apos;
 };
 </code></pre><p> alert(person.name);<br> alert(person[“5”]);</p>
 </li>
 <li><p>使用工厂模式创建对象,返回带有属性和方法的person对象。</p>
-<p> function createPerson(name, age,job) {</p>
-<pre><code>    var o = new Object();
+<pre><code>function createPerson(name, age,job) {
+    var o = new Object();
     o.name=name;
     o.age=31;
     o.sayName=function() {
@@ -417,51 +417,66 @@ this.sayName = function () {
 <p> var person = new Person(“kevin”, 31, “SE”);<br> person.sayName();</p>
 </li>
 <li><p>使用原型模式创建对象； 解决了方法4中提到的缺陷， 使不同的对象的函数（ 如sayFriends） 指向了同一个函数。 但它本身也有缺陷， 就是实例共享了引用类型friends， 从下面的代码执行结果可以看到， 两个实例的friends的值是一样的， 这可能不是我们所期望的。<br> 复制代码</p>
-<p> function Person() {</p>
-<p> }</p>
-<p> Person.prototype = {</p>
-<pre><code>constructor: Person,
-name: &quot;kevin&quot;,
-age: 31,
-job: &quot;SE&quot;,
-friends: [&quot;Jams&quot;, &quot;Martin&quot;],
-sayFriends: function () {
-    alert(this.friends);
-}
-</code></pre><p> };<br> var person1 = new Person();<br> person1.friends.push(“Joe”);<br> person1.sayFriends(); //Jams,Martin,Joe</p>
-<p> var person2 = new Person();<br> person2.sayFriends(); //James,Martin,Joe</p>
-</li>
-<li><p>组合使用原型模式和构造函数创建对象， 解决了方法5中提到的缺陷， 而且这也是使用最广泛、 认同度最高的创建对象的方法。<br> 复制代码</p>
-<p> function Person(name, age, job) {</p>
-<pre><code>this.name = name;
-this.age = age;
-this.job = job;　　
-this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
-</code></pre><p> }<br> Person.prototype.sayFriends = function () {</p>
-<pre><code>alert(this.friends);
-</code></pre><p> };<br> var person1 = new Person(“kevin”, 31, “SE”);<br> var person2 = new Person(“Tom”, 30, “SE”);<br> person1.friends.push(“Joe”);<br> person1.sayFriends(); //Jams,Martin,Joe<br> person2.sayFriends(); //Jams,Martin</p>
-<p> 复制代码</p>
-</li>
-<li><p>动态原型模式； 这个模式的好处在于看起来更像传统的面向对象编程， 具有更好的封装性， 因为在构造函数里完成了对原型创建。 这也是一个推荐的创建对象的方法。<br> 复制代码</p>
-<p> function Person(name, age, job) {</p>
-<pre><code>//属性
-this.name = name;
-this.age = age;
-this.job = job;
-this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
-//方法
-if (typeof this.sayName != &quot;function&quot;) {
-    Person.prototype.sayName = function () {
-        alert(this.name);
-    };
+<pre><code>function Person() {
 
-    Person.prototype.sayFriends = function () {
-        alert(this.friends);
-    };
 }
-</code></pre><p> }</p>
-<p> var person = new Person(“kevin”, 31, “SE”);<br> person.sayName();<br> person.sayFriends();</p>
-</li>
+
+Person.prototype = {
+    constructor: Person,
+    name: &quot;kevin&quot;,
+    age: 31,
+    job: &quot;SE&quot;,
+    friends: [&quot;Jams&quot;, &quot;Martin&quot;],
+    sayFriends: function () {
+        alert(this.friends);
+    }
+};
+var person1 = new Person();
+person1.friends.push(&quot;Joe&quot;);
+person1.sayFriends(); //Jams,Martin,Joe
+
+var person2 = new Person();
+person2.sayFriends(); //James,Martin,Joe
+</code></pre></li>
+<li><p>组合使用原型模式和构造函数创建对象， 解决了方法5中提到的缺陷， 而且这也是使用最广泛、 认同度最高的创建对象的方法。<br> 复制代码</p>
+<pre><code>function Person(name, age, job) {
+    this.name = name;
+    this.age = age;
+    this.job = job;　　
+    this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
+}
+Person.prototype.sayFriends = function () {
+    alert(this.friends);
+};
+var person1 = new Person(&quot;kevin&quot;, 31, &quot;SE&quot;);
+var person2 = new Person(&quot;Tom&quot;, 30, &quot;SE&quot;);
+person1.friends.push(&quot;Joe&quot;);
+person1.sayFriends(); //Jams,Martin,Joe
+person2.sayFriends(); //Jams,Martin
+</code></pre></li>
+<li><p>动态原型模式； 这个模式的好处在于看起来更像传统的面向对象编程， 具有更好的封装性， 因为在构造函数里完成了对原型创建。 这也是一个推荐的创建对象的方法。<br> 复制代码</p>
+<pre><code>function Person(name, age, job) {
+    //属性
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.friends = [&quot;Jams&quot;, &quot;Martin&quot;];
+    //方法
+    if (typeof this.sayName != &quot;function&quot;) {
+        Person.prototype.sayName = function () {
+            alert(this.name);
+        };
+
+        Person.prototype.sayFriends = function () {
+            alert(this.friends);
+        };
+    }
+}
+
+var person = new Person(&quot;kevin&quot;, 31, &quot;SE&quot;);
+person.sayName();
+person.sayFriends();
+</code></pre></li>
 </ol>
 </li>
 </ul>
