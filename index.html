@@ -277,6 +277,176 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/01/Angular/" itemprop="url">
+                  事件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-01T23:44:41+08:00" content="2015-12-01">
+              2015-12-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Angular-总结"><a href="#Angular-总结" class="headerlink" title="Angular 总结"></a>Angular 总结</h2><h3 id="1、使用场景"><a href="#1、使用场景" class="headerlink" title="1、使用场景"></a>1、使用场景</h3><pre><code>angular 主要是用来做一些单页面应用和后天管理系统，angular 的缺点是里面的数据是通过动态帮顶接口动态创建出来的，不利于搜索引擎中的爬虫爬取到关键字的信息。
+</code></pre><h3 id="2、自己使用-Angular-做过-angular版的-todoList-的demo。"><a href="#2、自己使用-Angular-做过-angular版的-todoList-的demo。" class="headerlink" title="2、自己使用 Angular 做过 angular版的 todoList 的demo。"></a>2、自己使用 Angular 做过 angular版的 todoList 的demo。</h3><h3 id="3、通过锚点定位"><a href="#3、通过锚点定位" class="headerlink" title="3、通过锚点定位"></a>3、通过锚点定位</h3><pre><code>&lt;a href=&quot;#gogo&quot;&gt;定位&lt;/a&gt;  //点击上面这个 a 标签会定位到下面的那个标签的位置
+
+&lt;a name=&quot;gogo&quot;&gt;要定位的位置&lt;/a&gt;  
+</code></pre><h3 id="4、前端录用跳转"><a href="#4、前端录用跳转" class="headerlink" title="4、前端录用跳转"></a>4、前端录用跳转</h3><pre><code>1. 通过 a 标签的锚点（hash）实现前端路由 url 的跳转，实际是通过监听 hash 的改变来渲染不同的页面，之所以不用传统的 a 标签的 href 属性，是因为传统的 a 的标签的 href 会真的发送请求跳转页面，虽然通过注册事件也可以最终实现目的，但是太麻烦了。
+
+2. 所谓的单页应用实际就是利用 hash 做网页内部局部内容的替换
+    01. 为什么不适用传统而路径？
+        因为传统的路径会默认发同步请求跳转。
+    02. 为什么 hash 中的路径都是以 &apos;/&apos; 开头，是为了区分普通的 hash
+</code></pre><h3 id="5、单页应用"><a href="#5、单页应用" class="headerlink" title="5、单页应用"></a>5、单页应用</h3><pre><code>1. 实际就是利用 hash 请求数据替换局部内容。
+
+2. SPA 单页面的核心： 就是通过监听锚点事件变化，获取锚点内容，根据不同的锚点做不同的内容改变
+
+3. 如何在网页中解析 URL 地址：
+    01 字符串操作
+    02 正则匹配
+    03 a 标签的 DOM 操作  a.hash 请求hash， a.host 请求路径  a.port 请求端口号
+        a.protocol  请求协议
+
+4. 单页应用的好处
+    提高了整个应用程序的响应速度、增加了用户体验。
+    重用资源
+    方便统一管理和代码重用   
+</code></pre><h3 id="6、在页面中定义和加载使用模块"><a href="#6、在页面中定义和加载使用模块" class="headerlink" title="6、在页面中定义和加载使用模块"></a>6、在页面中定义和加载使用模块</h3><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;!-- 将模块作用到视图中 --&gt;
+&lt;body ng-app=&quot;DemoApp&quot;&gt;
+    &lt;!-- 引用控制器函数 --&gt;
+    &lt;div ng-controller=&quot;DemoController_01&quot;&gt;
+        &lt;h2&gt;{{ num1 }}&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;!-- 引用控制器函数 --&gt;
+    &lt;div ng-controller=&quot;DemoController_02&quot;&gt;
+        &lt;h2&gt;{{ num2 }}&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;!-- 引用控制器函数 --&gt;
+    &lt;div ng-controller=&quot;DemoController_03&quot;&gt;
+        &lt;h2&gt;{{ num3 }}&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;js/angular-1.2.3.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- &lt;script src=&quot;js/angular.js&quot;&gt;&lt;/script&gt; --&gt;
+    &lt;script&gt;
+        //1. 定义模块，可以使用变量接收定义好的模块
+        //          angular.module(&quot;模块名&quot;, [])，如果里面是一个参数就表示获取一个模块，两个参数，第二个参数
+        //          是数组，这个数组表示该模块的依赖，空数组表示没有依赖，同时创建一个模块，如果有依赖，在数
+        //          组中指定依赖的模块名，类似于 require 的作用
+        //2. 在该模块中定义控制器函数
+        //3. 将模块和控制器作用到视图， 首先使用 ng-app=&quot;模块名&quot; ，将模块作用到视图中，
+        //                                  然后再引用控制器函数 ng-controller=&quot;函数名&quot;
+        //定义模块，可以使用变量接收定义好的模块，也可以直接使用
+        //创建控制器最正确的方式是使用数组，在数组引入依赖项
+        //有三种定义控制器函数的方法
+        //1.定义好模块直接在后面定义控制器函数
+        var demoApp = angular.module(&quot;DemoApp&quot;, [])
+            .controller(&apos;DemoController_01&apos;, [&apos;$scope&apos;, function ($scope) {
+                //初始化数据模型模型成员
+                $scope.num1 = &apos;这是直接在模块后面定义控制器函数 ==== DemoController_01&apos;;
+            }]);
+        //2. 使用接收定义模块返回值的变量定义控制器函数
+        demoApp.controller(&apos;DemoController_02&apos;, [&apos;$scope&apos;, function($scope) {
+            //这是使用接收定义好的模块返回值的变量定义控制器函数
+            //初始化数据模型成员
+            $scope.num2 = &apos;这是使用接收定义好的模块返回值的变量定义控制器函数 ==== DemoController_02&apos;;
+        }]);
+        //3. 直接获取定义好的模块，定义控制器函数
+        angular.module(&quot;DemoApp&quot;).controller(&apos;DemoController_03&apos;, [&apos;$scope&apos;, function($scope) {
+            //初始化数据模型成员
+            $scope.num3 = &apos;直接获取定义好的模块，定义控制器函数 ==== DemoController_03&apos;
+        }])
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/04/10/Ajax/" itemprop="url">
                   Ajax
                 </a>
@@ -902,7 +1072,7 @@ xhr.onreadystatechange = function() {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
