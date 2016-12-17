@@ -1,0 +1,788 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="一、CSS3知识点
+图片的宽度会继承父元素。
+z-index 是设置层级
+
+
+常用字体格式
+.otf 常用浏览器：Firefox3.5+、Chrome4.0+、Safari3.1+、Opera10.0+、iOS Mobile、Safari4.2+；
+.woff 常用浏览器：IE9+、Firefox3.5+、Chrome6+、Safari3.6+、Opera11.1+；
+.eot 是 IE 专用字体">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3 和移动 Web">
+<meta property="og:url" content="http://yoursite.com/2015/05/16/CSS3和移动Web/index.html">
+<meta property="og:site_name" content="牛顿丶博客">
+<meta property="og:description" content="一、CSS3知识点
+图片的宽度会继承父元素。
+z-index 是设置层级
+
+
+常用字体格式
+.otf 常用浏览器：Firefox3.5+、Chrome4.0+、Safari3.1+、Opera10.0+、iOS Mobile、Safari4.2+；
+.woff 常用浏览器：IE9+、Firefox3.5+、Chrome6+、Safari3.6+、Opera11.1+；
+.eot 是 IE 专用字体">
+<meta property="og:image" content="http://yoursite.com/image/01.bmp">
+<meta property="og:updated_time" content="2016-12-17T09:23:55.439Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3 和移动 Web">
+<meta name="twitter:description" content="一、CSS3知识点
+图片的宽度会继承父元素。
+z-index 是设置层级
+
+
+常用字体格式
+.otf 常用浏览器：Firefox3.5+、Chrome4.0+、Safari3.1+、Opera10.0+、iOS Mobile、Safari4.2+；
+.woff 常用浏览器：IE9+、Firefox3.5+、Chrome6+、Safari3.6+、Opera11.1+；
+.eot 是 IE 专用字体">
+<meta name="twitter:image" content="http://yoursite.com/image/01.bmp">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/05/16/CSS3和移动Web/"/>
+
+
+  <title> CSS3 和移动 Web | 牛顿丶博客 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">牛顿丶博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS3 和移动 Web
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-05-16T23:46:34+08:00" content="2015-05-16">
+              2015-05-16
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、CSS3"><a href="#一、CSS3" class="headerlink" title="一、CSS3"></a>一、CSS3</h2><h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
+<li>图片的宽度会继承父元素。<ul>
+<li><code>z-index</code> 是设置层级</li>
+</ul>
+</li>
+<li>常用字体格式<ul>
+<li>.otf 常用浏览器：Firefox3.5+、Chrome4.0+、Safari3.1+、Opera10.0+、iOS Mobile、Safari4.2+；</li>
+<li>.woff 常用浏览器：IE9+、Firefox3.5+、Chrome6+、Safari3.6+、Opera11.1+；</li>
+<li>.eot 是 IE 专用字体</li>
+<li>.svg 常用浏览器：Chrome4+、Safari3.1+、Opera10.0+、iOS Mobile Safari3.2+；</li>
+</ul>
+</li>
+</ul>
+<h4 id="CSS3-的兼容性解决"><a href="#CSS3-的兼容性解决" class="headerlink" title="CSS3 的兼容性解决"></a>CSS3 的兼容性解决</h4><ul>
+<li>一般是加私有前缀<ol>
+<li>-webkit-border-radius: 50%; 适用于谷歌 chrome</li>
+<li>-moz-  适用于火狐 Firefox</li>
+<li>-o- 针对欧朋</li>
+<li>-ms- 针对 IE </li>
+</ol>
+</li>
+<li>如不能解决，应尽量避免使用</li>
+</ul>
+<h2 id="二、移动-web-开发"><a href="#二、移动-web-开发" class="headerlink" title="二、移动 web 开发"></a>二、移动 web 开发</h2><p>   1、怎么设置 viewport，才能达到移动端的适配，需要满足什么条件</p>
+<pre><code>1. 我们看到的页面比例必须和 PC 端保持一致
+2. 网页的内容宽度必须和移动端设备的宽度保持一致
+3. 不允许用户自行缩放网页
+</code></pre><p>   2、设置 viewport 视口用来满足以上条件<br>    <!--国际上通用的移动web页面的设置 标准化的设置--><br>    (01) <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"><br>        设置视口 viewport<br>        width=device-width  设置视口宽度，是当前设备的宽度<br>        initial-scale=1.0 设置 viewport 的初始化缩放比是 1.0，不放大，也不缩小，和在 PC 端显示的比例一样<br>        user-scalable=0 设置是否允许用户缩放， 0 / no 是不允许， 1 / yes 是允许<br>        maximum-scale   是设置最大允许缩放比<br>        minimum-scale   是设置最小允许缩放比<br>        这样设置之后就构建了一个标准的移动 Web 页面</p>
+<p>   3、清除浮动<br>        1、使用空标签清除浮动<br>            <ul><br>                <li>AAA</li><br>                <li>BBB</li><br>                <li>CCC</li><br>                <br style="clear:both"><br>            </ul><br>        2、使用 overflow 属性<br>            <ul style="overflow: hidden;zoom:1"><br>                <li>AAA</li><br>                <li>BBB</li><br>                <li>CCC</li><br>            </ul><br>        3、添加伪元素<br>        .clearfix::before,.clearfix::after {<br>                content: “”;<br>                display: block;<br>                visibility: hidden;<br>                height: 0;<br>                line-height: 0;<br>                clear: both;<br>            }</p>
+<p>   4、移动端的问题<br>        安卓和IOS视口设置有什么区别？<br>            <!-- 答: IOS：<meta name="apple-mobile-web-app-title" content="标题">  --><br>            答：<br>        300ms延时？<br>            答: (1) 300ms 延时的原因是在移动端使用 click 事件的时候会有一个 300ms 的延时，解决方法是通过封装一个 tap()方法，里面的具体过程是用 touchstart 、touchmove和touchend 方法的结合，判断从开始触摸到结束触摸并且没有触发触摸移动事件的时间有没有超过 150ms，没有超过就认为触发了 tap 方法，然后执行回调函数，处理对应的逻辑，若是超过了 150ms，就认为失败，跳过，不执行回调函数。<br>                (2) 使用 fastClick 框架，解决 click 300ms 延时问题。</p>
+<p>   5、移动端事件  </p>
+<ul>
+<li>touchstart：当手指触碰屏幕时候发生。不管当前有多少只手指</li>
+<li>touchmove：当手指在屏幕上连续滑动的时候触发。通常我们</li>
+<li>在滑屏页面会调用 event 的 preventDefault() 可以用来阻止默认情况的发生。阻止页面滚动</li>
+<li>touchend：当手指离开屏幕时触发。</li>
+<li>touchcancel：当系统停止跟踪触摸时触发。</li>
+<li>触摸事件的响应顺序<ul>
+<li>1、ontouchstart</li>
+<li>2、ontouchmove</li>
+<li>3、ontouchend</li>
+<li>4、onclick  300ms延时</li>
+</ul>
+</li>
+</ul>
+<p>   6、/<em>在移动端清除浏览器默认样式</em>/<br>        -webkit-appearance: none;</p>
+<p>   7、时间戳</p>
+<pre><code>var time = Date.now() / new Date().now() 时间戳，从 1970年到现在时间的毫秒数
+</code></pre><p>解决 300ms 延时问题 </p>
+<p>   8、Zepto是一个轻量级的针对现代高级浏览器的JavaScript库， 它与jquery有着类似的api。</p>
+<pre><code>Zepto是一个轻量级的针对现代高级浏览器的JavaScript库， 它与jquery有着类似的api。
+设计的目的是提供jquery的类似的APIs，但并不是100%覆盖jquery为目的。
+</code></pre><p>   9、swiper 是一个用于控制滑动的插件，可以设置要滑动的DOM对象，是否滑动，滑动的缓冲距离。</p>
+<pre><code>itcast.iScroll({
+    swipeDom:document.querySelector(&apos;.jd_category_right&apos;),
+    swipeType:&apos;y&apos;,
+    swipeDistance:50
+});
+</code></pre><h2 id="二、响应式开发"><a href="#二、响应式开发" class="headerlink" title="二、响应式开发"></a>二、响应式开发</h2><p>   1、媒体查询: 通过<code>@media screen</code>媒体查询，当检测到当前 screen （屏幕）的宽度位于某个宽度区间时显示不同的网络布局。</p>
+<pre><code>1、xs-超小屏幕 768px 以下             --- 手机
+2、sm-小屏设备 768px-992px            --- 平板
+3、md-中等屏幕 992px-1200px           --- 标屏 窄屏设备
+4、lg-超大屏幕 1200px 以上            --- 笔记本 显示器 大屏设备
+</code></pre><p>   2、响应式开发的原理 </p>
+<pre><code>1、媒体查询和栅格系统
+    + 栅格系统 
+        - .row 是行，无固定高度，左右各有一个 15px 的 margin-right: 15px; margin-left: 15px;一行默认是12份。
+        - .col-*-* 是列，第一个 * 代表是在什么屏幕下，第二个 * 代表这个元素占一行的多少份
+    + 列偏移
+        - .col-md-offset-数字  在中屏上偏移的行的份数，类似于margin
+    + 列排序
+        - col-xs-pull-9 左拉9份
+        - col-xs-push-3 右推3份
+    + bootstrap组件 
+        - collapse 手风琴
+        - carousel 旋转木马
+        - Affix 在固定位置显示
+2、注意项
+    &lt;!-- 指定编码格式 --&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;!-- 当时用IE浏览器的时候，指定使用最新的内核进行渲染 --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;!-- 进行适配移动端的设置，把viewport设置标准写法，适配移动终端 --&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no,
+        maximum-scale=1.0, minimum-scale=1.0&quot;/&gt;
+    &lt;!-- 引入html5shiv.min.js是为了兼容HTML5的语义化的标签在低版本的浏览器中 --&gt;
+    &lt;!-- 这个第三方库的原理是使用 document.createElement(&apos;标签&apos;)对新标签创建一遍，
+        然后改成块级元素 display: block; --&gt;
+    &lt;!-- 引入respond.min.js 是为了兼容识别 media query(媒体查询)--&gt;
+    &lt;!-- 条件注释 --&gt;
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script src=&quot;lib/html5shiv/html5shiv.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;lib/respond/respond.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt; 
+</code></pre><p> 3、前端框架 </p>
+<pre><code>1. AmazeUI(跨终端框架)、BootStrap、
+</code></pre><p> 4、模板</p>
+<pre><code>1. artTemplate
+    (原生语法版)
+            &lt;script id=&quot;test&quot; type=&quot;text/html&quot;&gt;  
+                &lt;%if(admin){%>  
+                        <% for(var="" i="0;" i<list.length;="" i++){%="">  
+                            <div><%=i%>:<%=list[i].value%></%=list[i].value%></%=i%></div>  
+                        <%}%&gt; &lt;%}else{%="">  
+                        <div>没有结果！</div>  
+                    <%}%&gt; &lt;="" script&gt;="" 1、引入template-native.js="" 2、&lt;%="" 与="" %&gt;="" 符号包裹起来的语句则为模板的逻辑表达式="" 3、&lt;%="content" %&gt;为输出表达式="" (简洁语法版)这个和="" nodejs="" 中的="" pre&gt;&lt;pre="" name="&quot;code&quot;" class="&quot;javascript&quot;&gt;&lt;script" id="&quot;test&quot;" type="&quot;text/html&quot;&gt;" {{if="" admin}}="" {{each="" list="" as="" value="" index}}="" &lt;div&gt;{{index}}:{{value}}&lt;="" div&gt;="" {{="" each}}="" {{else="" if}}="" 条件判断="" 2.="" xtpl模板，是="" 中使用的模板。="" 3.="" underscore，在这个模板中有一个="" _.template()方法，把获取到的内容用template方法转化成模板方法="" var="" templatepointfuc="_.template(templatePointContent);" *="" 生成轮播图的数据="" function="" banner()="" {="" data="[" m_img:="" &quot;images="" slide_01_640x340.jpg&quot;,="" pc_img:="" slide_01_2000x410.jpg&quot;="" },="" slide_02_640x340.jpg&quot;,="" slide_02_2000x410.jpg&quot;="" slide_03_640x340.jpg&quot;,="" slide_03_2000x410.jpg&quot;="" slide_04_640x340.jpg&quot;,="" slide_04_2000x410.jpg&quot;="" }="" ];="" （1）这个方法是通过获取模板的内容动态的生成轮播图，有数据传输="" 通过id获取到模板里面的数据="" randerhtml="function()" 获取页面窗口的宽度="" width="$(window).width();" ismobile="width" 768?="" true="" :="" false;="" 获取样式小点中的模板内容="" templatepointcontent="$(&quot;#wjs_point_box&quot;).html();" 把获取到的内容用template方法转化成模板方法="" 在模板方法中，传入数据，转化成html结构="" 如果只是用弄好的静态页面做模板动态生成，这里的括号里面不传入数据也可以动态生成="" 这里的lis只是一个json对象的变量，在动态生成轮播图的时候用到的时lis对象的date属性里面的json对象值="" templatepointhtml="templatePointFuc({lis:Data});" 渲染在页面上="" $(&quot;ol&quot;).html(templatepointhtml);="" 获取装载图片的盒子的模板内容="" templatebannercontent="$(&quot;#wjs_banner_box&quot;).html();" templatebannerfuc="_.template(templateBannerContent);" 这里使用的是lis这个变量对象中的date中的属性值，lis只是个对象变量，重要的是后面的data中的数据="" templatebannerhtml="templateBannerFuc({lis:Data," ism:ismobile});="" 通过对象属性把值传过去="" $(&quot;#wjs_banner_img_box&quot;).html(templatebannerhtml);="" };="" 刷新一次，就执行一次="" $(window).on(&quot;resize&quot;,="" function()="" randerhtml();="" }).trigger(&quot;resize&quot;);="" 这里的trigger是加载一面是强制行的就刷新一次="" <="" code=""></%}%&gt;></%}%&gt;></%></code></pre><p>   5、监听刷新事件</p>
+<pre><code>//刷新一次，就执行一次
+$(window).on(&quot;resize&quot;, function() {
+    randerHtml();
+}).trigger(&quot;resize&quot;);
+//这里的trigger是加载一面是强制行的就刷新一次
+</code></pre><p>   6、存储</p>
+<pre><code>1. sessionStorage约5M，localStorage约20M，只能存储字符串，对于对象，使用 JSON.stringify()编码成字符串后存储。
+2. window.sessionStorage
+    1、生命周期为关闭浏览器窗口
+    2、在同一个窗口下数据可以共享
+3.  window.localStorage
+    1、永久生效，除非手动删除
+    2、可以多窗口共享
+4. 设置存储
+    setItem(key, value) 设置存储内容
+    getItem(key) 读取存储内容
+    removeItem(key) 删除键值为key的存储内容
+    clear() 清空所有存储内容
+</code></pre><p>   7、位置坐标的区别：</p>
+<ul>
+<li><p>event.clientX、event.clientY</p>
+<ul>
+<li>鼠标相对于浏览器窗口可视区域的X，Y坐标（窗口坐标），可视区域不包括工具栏和滚动条。IE事件和标准事件都定义了这2个属性</li>
+</ul>
+</li>
+<li><p>event.pageX、event.pageY</p>
+<ul>
+<li>类似于event.clientX、event.clientY，但它们使用的是文档坐标而非窗口坐标。这2个属性不是标准属性，但得到了广泛支持。IE事件中没有这2个属性。</li>
+</ul>
+</li>
+<li><p>event.offsetX、event.offsetY</p>
+<ul>
+<li>鼠标相对于事件源元素（srcElement）的X,Y坐标，只有IE事件有这2个属性，标准事件没有对应的属性。</li>
+</ul>
+</li>
+<li><p>event.screenX、event.screenY</p>
+<ul>
+<li>鼠标相对于用户显示器屏幕左上角的X,Y坐标。标准事件和IE事件都定义了这2个属性</li>
+</ul>
+<p><img src="image/01.bmp" alt="坐标位置说明">  </p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/04/10/Ajax/" rel="next" title="Ajax">
+                <i class="fa fa-chevron-left"></i> Ajax
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/01/Angular/" rel="prev" title="事件">
+                事件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/nidun.jpg"
+               alt="牛顿丶" />
+          <p class="site-author-name" itemprop="name">牛顿丶</p>
+          <p class="site-description motion-element" itemprop="description">Write less do more!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yangzhenyin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="yangzhenying.github.io" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、CSS3"><span class="nav-number">1.</span> <span class="nav-text">一、CSS3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点"><span class="nav-number">1.1.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS3-的兼容性解决"><span class="nav-number">1.1.1.</span> <span class="nav-text">CSS3 的兼容性解决</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、移动-web-开发"><span class="nav-number">2.</span> <span class="nav-text">二、移动 web 开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、响应式开发"><span class="nav-number">3.</span> <span class="nav-text">二、响应式开发</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">牛顿丶</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
