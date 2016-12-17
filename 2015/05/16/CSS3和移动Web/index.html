@@ -125,7 +125,7 @@ z-index 是设置层级
 .woff 常用浏览器：IE9+、Firefox3.5+、Chrome6+、Safari3.6+、Opera11.1+；
 .eot 是 IE 专用字体">
 <meta property="og:image" content="http://yoursite.com/image/01.bmp">
-<meta property="og:updated_time" content="2016-12-17T09:23:55.439Z">
+<meta property="og:updated_time" content="2016-12-17T10:34:18.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3 和移动 Web">
 <meta name="twitter:description" content="一、CSS3知识点
@@ -407,8 +407,10 @@ z-index 是设置层级
 </code></pre><p>   2、响应式开发的原理 </p>
 <pre><code>1、媒体查询和栅格系统
     + 栅格系统 
-        - .row 是行，无固定高度，左右各有一个 15px 的 margin-right: 15px; margin-left: 15px;一行默认是12份。
-        - .col-*-* 是列，第一个 * 代表是在什么屏幕下，第二个 * 代表这个元素占一行的多少份
+        - .row 是行，无固定高度，左右各有一个 15px 的 margin-right: 15px; 
+        margin-left: 15px;一行默认是12份。
+        - .col-*-* 是列，第一个 * 代表是在什么屏幕下，第二个 * 代表这个元素占一行的
+        多少份
     + 列偏移
         - .col-md-offset-数字  在中屏上偏移的行的份数，类似于margin
     + 列排序
@@ -424,8 +426,8 @@ z-index 是设置层级
     &lt;!-- 当时用IE浏览器的时候，指定使用最新的内核进行渲染 --&gt;
     &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
     &lt;!-- 进行适配移动端的设置，把viewport设置标准写法，适配移动终端 --&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no,
-        maximum-scale=1.0, minimum-scale=1.0&quot;/&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, 
+    user-scalable=no, maximum-scale=1.0, minimum-scale=1.0&quot;/&gt;
     &lt;!-- 引入html5shiv.min.js是为了兼容HTML5的语义化的标签在低版本的浏览器中 --&gt;
     &lt;!-- 这个第三方库的原理是使用 document.createElement(&apos;标签&apos;)对新标签创建一遍，
         然后改成块级元素 display: block; --&gt;
@@ -453,7 +455,8 @@ $(window).on(&quot;resize&quot;, function() {
 }).trigger(&quot;resize&quot;);
 //这里的trigger是加载一面是强制行的就刷新一次
 </code></pre><p>   6、存储</p>
-<pre><code>1. sessionStorage约5M，localStorage约20M，只能存储字符串，对于对象，使用 JSON.stringify()编码成字符串后存储。
+<pre><code>1. sessionStorage约5M，localStorage约20M，只能存储字符串，对于对象，使用 
+JSON.stringify()编码成字符串后存储。
 2. window.sessionStorage
     1、生命周期为关闭浏览器窗口
     2、在同一个窗口下数据可以共享

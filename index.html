@@ -321,11 +321,13 @@
       
         
           
-            <h2 id="Angular-总结"><a href="#Angular-总结" class="headerlink" title="Angular 总结"></a>Angular 总结</h2><h3 id="1、使用场景"><a href="#1、使用场景" class="headerlink" title="1、使用场景"></a>1、使用场景</h3><pre><code>angular 主要是用来做一些单页面应用和后天管理系统，angular 的缺点是里面的数据是通过动态帮顶接口动态创建出来的，不利于搜索引擎中的爬虫爬取到关键字的信息。
+            <h2 id="Angular-总结"><a href="#Angular-总结" class="headerlink" title="Angular 总结"></a>Angular 总结</h2><h3 id="1、使用场景"><a href="#1、使用场景" class="headerlink" title="1、使用场景"></a>1、使用场景</h3><pre><code>angular 主要是用来做一些单页面应用和后天管理系统，angular的缺点是里面的数据是通过动态帮顶
+接口动态创建出来的，不利于搜索引擎中的爬虫爬取到关键字的信息。
 </code></pre><h3 id="2、自己使用-Angular-做过-angular版的-todoList-的demo。"><a href="#2、自己使用-Angular-做过-angular版的-todoList-的demo。" class="headerlink" title="2、自己使用 Angular 做过 angular版的 todoList 的demo。"></a>2、自己使用 Angular 做过 angular版的 todoList 的demo。</h3><h3 id="3、通过锚点定位"><a href="#3、通过锚点定位" class="headerlink" title="3、通过锚点定位"></a>3、通过锚点定位</h3><pre><code>&lt;a href=&quot;#gogo&quot;&gt;定位&lt;/a&gt;  //点击上面这个 a 标签会定位到下面的那个标签的位置
 
 &lt;a name=&quot;gogo&quot;&gt;要定位的位置&lt;/a&gt;  
-</code></pre><h3 id="4、前端路由跳转"><a href="#4、前端路由跳转" class="headerlink" title="4、前端路由跳转"></a>4、前端路由跳转</h3><pre><code>1. 通过 a 标签的锚点（hash）实现前端路由 url 的跳转，实际是通过监听 hash 的改变来渲染不同的页面，之所以不用传统的 a 标签的 href 属性，是因为传统的 a 的标签的 href 会真的发送请求跳转页面，虽然通过注册事件也可以最终实现目的，但是太麻烦了。
+</code></pre><h3 id="4、前端路由跳转"><a href="#4、前端路由跳转" class="headerlink" title="4、前端路由跳转"></a>4、前端路由跳转</h3><pre><code>1. 通过 a 标签的锚点（hash）实现前端路由 url 的跳转，实际是通过监听 hash 的改变来渲染不同
+的页面，之所以不用传统的 a 标签的 href 属性，是因为传统的 a 的标签的 href 会真的发送请求跳转页面，虽然通过注册事件也可以最终实现目的，但是太麻烦了。
 
 2. 所谓的单页应用实际就是利用 hash 做网页内部局部内容的替换
     01. 为什么不适用传统而路径？
@@ -333,7 +335,8 @@
     02. 为什么 hash 中的路径都是以 &apos;/&apos; 开头，是为了区分普通的 hash
 </code></pre><h3 id="5、单页应用"><a href="#5、单页应用" class="headerlink" title="5、单页应用"></a>5、单页应用</h3><pre><code>1. 实际就是利用 hash 请求数据替换局部内容。
 
-2. SPA 单页面的核心： 就是通过监听锚点事件变化，获取锚点内容，根据不同的锚点做不同的内容改变
+2. SPA 单页面的核心： 就是通过监听锚点事件变化，获取锚点内容，根据不同的锚点做不同的内容
+改变
 
 3. 如何在网页中解析 URL 地址：
     01 字符串操作
@@ -369,12 +372,14 @@
     &lt;!-- &lt;script src=&quot;js/angular.js&quot;&gt;&lt;/script&gt; --&gt;
     &lt;script&gt;
         //1. 定义模块，可以使用变量接收定义好的模块
-        //          angular.module(&quot;模块名&quot;, [])，如果里面是一个参数就表示获取一个模块，两个参数，第二个参数
-        //          是数组，这个数组表示该模块的依赖，空数组表示没有依赖，同时创建一个模块，如果有依赖，在数
+        //          angular.module(&quot;模块名&quot;, [])，如果里面是一个参数就表示获取一个模
+        块，两个参数，第二个参数
+        //          是数组，这个数组表示该模块的依赖，空数组表示没有依赖，同时创建一个模
+        块，如果有依赖，在数
         //          组中指定依赖的模块名，类似于 require 的作用
         //2. 在该模块中定义控制器函数
         //3. 将模块和控制器作用到视图， 首先使用 ng-app=&quot;模块名&quot; ，将模块作用到视图中，
-        //                                  然后再引用控制器函数 ng-controller=&quot;函数名&quot;
+        // 然后再引用控制器函数 ng-controller=&quot;函数名&quot;
         //定义模块，可以使用变量接收定义好的模块，也可以直接使用
         //创建控制器最正确的方式是使用数组，在数组引入依赖项
         //有三种定义控制器函数的方法
@@ -382,18 +387,21 @@
         var demoApp = angular.module(&quot;DemoApp&quot;, [])
             .controller(&apos;DemoController_01&apos;, [&apos;$scope&apos;, function ($scope) {
                 //初始化数据模型模型成员
-                $scope.num1 = &apos;这是直接在模块后面定义控制器函数 ==== DemoController_01&apos;;
+                $scope.num1 = &apos;这是直接在模块后面定义控制器函数 ====
+                 DemoController_01&apos;;
             }]);
         //2. 使用接收定义模块返回值的变量定义控制器函数
         demoApp.controller(&apos;DemoController_02&apos;, [&apos;$scope&apos;, function($scope) {
             //这是使用接收定义好的模块返回值的变量定义控制器函数
             //初始化数据模型成员
-            $scope.num2 = &apos;这是使用接收定义好的模块返回值的变量定义控制器函数 ==== DemoController_02&apos;;
+            $scope.num2 = &apos;这是使用接收定义好的模块返回值的变量定义控制器函数 ====
+             DemoController_02&apos;;
         }]);
         //3. 直接获取定义好的模块，定义控制器函数
         angular.module(&quot;DemoApp&quot;).controller(&apos;DemoController_03&apos;, [&apos;$scope&apos;, function($scope) {
             //初始化数据模型成员
-            $scope.num3 = &apos;直接获取定义好的模块，定义控制器函数 ==== DemoController_03&apos;
+            $scope.num3 = &apos;直接获取定义好的模块，定义控制器函数 ====
+             DemoController_03&apos;
         }])
     &lt;/script&gt;
 &lt;/body&gt;
@@ -498,7 +506,8 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
 </code></pre><h3 id="事件机制：-事件冒泡和事件捕获"><a href="#事件机制：-事件冒泡和事件捕获" class="headerlink" title="事件机制： 事件冒泡和事件捕获"></a>事件机制： 事件冒泡和事件捕获</h3><pre><code>1、事件冒泡和事件捕获：
     事件捕获是自上而下的，而事件冒泡是自下而上的。
 
-    （1） 冒泡型事件：事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序触发。
+    （1） 冒泡型事件：事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序
+    触发。
 
      IE 5.5: div -&gt; body -&gt; document
 
@@ -506,14 +515,14 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
 
      Mozilla 1.0: div -&gt; body -&gt; html -&gt; document -&gt; window
 
-    （2） 捕获型事件(event capturing)：事件从最不精确的对象(document 对象)开始触发，然后到
-    最精确(也可以在窗口级别捕获事件，不过必须由开发人员特别指定)。
+    （2） 捕获型事件(event capturing)：事件从最不精确的对象(document 对象)开始触发，然
+    后到最精确(也可以在窗口级别捕获事件，不过必须由开发人员特别指定)。
 
-    支持W3C标准的浏览器在添加事件时用addEventListener(event,fn,useCapture)方法，其中第3
-    个参数useCapture是一个Boolean值，用来设置事件是在事件捕获时执行，还是事件冒泡时执行。而
-    不兼容W3C的浏览器(IE)用attachEvent()方法，此方法没有相关设置，不过IE的事件模型默认是在
-    事件冒泡时执行的，也就是在useCapture等于false的时候执行，所以把在处理事件时把
-    useCapture设置为false是比较安全，也实现兼容浏览器的效果。
+    支持W3C标准的浏览器在添加事件时用addEventListener(event,fn,useCapture)方法，其中第
+    3个参数useCapture是一个Boolean值，用来设置事件是在事件捕获时执行，还是事件冒泡时执
+    行。而不兼容W3C的浏览器(IE)用attachEvent()方法，此方法没有相关设置，不过IE的事件模
+    型默认是在事件冒泡时执行的，也就是在useCapture等于false的时候执行，所以把在处理事
+    件时把useCapture设置为false是比较安全，也实现兼容浏览器的效果。
 
     事件捕获阶段：事件从最上一级标签开始往下查找，直到捕获到事件目标(target)。
     事件冒泡阶段：事件从事件目标(target)开始，往上冒泡直到页面的最上一级标签。
@@ -522,7 +531,8 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
     &lt;div&gt;
     　　&lt;p&gt;元素&lt;/p&gt;
     &lt;/div&gt;
-    这两个元素都绑定了click事件，如果用户点击了p，它在div和p上都触发了click事件，那这两个事件处理程序哪个先执行呢？事件顺序是什么？
+    这两个元素都绑定了click事件，如果用户点击了p，它在div和p上都触发了click事件，那这两
+    个事件处理程序哪个先执行呢？事件顺序是什么？
 
     两种模型
     以前，Netscape和Microsoft是不同的实现方式。
@@ -531,7 +541,8 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
 
     Microsoft中，p先触发，这就叫做事件冒泡。
 
-    两种事件处理顺序刚好相反。IE只支持事件冒泡，Mozilla, Opera 7 和 Konqueror两种都支持，旧版本的Opera&apos;s 和 iCab两种都不支持 。
+    两种事件处理顺序刚好相反。IE只支持事件冒泡，Mozilla, Opera 7 和 Konqueror两种都支持，
+    旧版本的Opera&apos;s 和 iCab两种都不支持 。
 
     事件捕获
     当你使用事件捕获时，父级元素先触发，子级元素后触发，即div先触发，p后触发。
@@ -540,9 +551,12 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
     当你使用事件冒泡时，子级元素先触发，父级元素后触发，即p先触发，div后触发。
 
     W3C模型
-    W3C模型是将两者进行中和，在W3C模型中，任何事件发生时，先从顶层开始进行事件捕获，直到事件触发到达了事件源元素。然后，再从事件源往上进行事件冒泡，直到到达document。
+    W3C模型是将两者进行中和，在W3C模型中，任何事件发生时，先从顶层开始进行事件捕获，直到
+    事件触发到达了事件源元素。然后，再从事件源往上进行事件冒泡，直到到达document。
 
-    程序员可以自己选择绑定事件时采用事件捕获还是事件冒泡，方法就是绑定事件时通过addEventListener函数，它有三个参数，第三个参数若是true，则表示采用事件捕获，若是false，则表示采用事件冒泡。
+    程序员可以自己选择绑定事件时采用事件捕获还是事件冒泡，方法就是绑定事件时通过
+    addEventListener函数，它有三个参数，第三个参数若是true，则表示采用事件捕获，若
+    是false，则表示采用事件冒泡。
 
     ele.addEventListener(&apos;click&apos;,doSomething2,true)
 
@@ -556,11 +570,13 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
     ele.onclick = doSomething2
 
     IE浏览器
-    如上面所说，IE只支持事件冒泡，不支持事件捕获，它也不支持addEventListener函数，不会用第三个参数来表示是冒泡还是捕获，它提供了另一个函数attachEvent。
+    如上面所说，IE只支持事件冒泡，不支持事件捕获，它也不支持addEventListener函数，
+    不会用第三个参数来表示是冒泡还是捕获，它提供了另一个函数attachEvent。
 
     ele.attachEvent(&quot;onclick&quot;, doSomething2);
 
-    附：事件冒泡（的过程）：事件从发生的目标（event.srcElement||event.target）开始，沿着文档逐层向上冒泡，到document为止。
+    附：事件冒泡（的过程）：事件从发生的目标（event.srcElement||event.target）开始，
+    沿着文档逐层向上冒泡，到document为止。
 
     事件的传播是可以阻止的：
     • 在W3c中，使用stopPropagation（）方法
@@ -573,7 +589,7 @@ onload 事件的触发，表示页面包含图片等文件在内的所有元素�
 
 2、事件绑定：
 
- 分别是bind、live、delegate、on，对应的解除监听的函数分别是unbind、die、  undelegate、off。
+ 分别是bind、live、delegate、on，对应的解除监听的函数分别是unbind、die、undelegate、off。
   DOM事件模型最独特的性质是，文本节点也触发事件(在IE中不会)。
 </code></pre>
           
@@ -1077,8 +1093,10 @@ xhr.onreadystatechange = function() {
 </code></pre><p>   2、响应式开发的原理 </p>
 <pre><code>1、媒体查询和栅格系统
     + 栅格系统 
-        - .row 是行，无固定高度，左右各有一个 15px 的 margin-right: 15px; margin-left: 15px;一行默认是12份。
-        - .col-*-* 是列，第一个 * 代表是在什么屏幕下，第二个 * 代表这个元素占一行的多少份
+        - .row 是行，无固定高度，左右各有一个 15px 的 margin-right: 15px; 
+        margin-left: 15px;一行默认是12份。
+        - .col-*-* 是列，第一个 * 代表是在什么屏幕下，第二个 * 代表这个元素占一行的
+        多少份
     + 列偏移
         - .col-md-offset-数字  在中屏上偏移的行的份数，类似于margin
     + 列排序
@@ -1094,8 +1112,8 @@ xhr.onreadystatechange = function() {
     &lt;!-- 当时用IE浏览器的时候，指定使用最新的内核进行渲染 --&gt;
     &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
     &lt;!-- 进行适配移动端的设置，把viewport设置标准写法，适配移动终端 --&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no,
-        maximum-scale=1.0, minimum-scale=1.0&quot;/&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, 
+    user-scalable=no, maximum-scale=1.0, minimum-scale=1.0&quot;/&gt;
     &lt;!-- 引入html5shiv.min.js是为了兼容HTML5的语义化的标签在低版本的浏览器中 --&gt;
     &lt;!-- 这个第三方库的原理是使用 document.createElement(&apos;标签&apos;)对新标签创建一遍，
         然后改成块级元素 display: block; --&gt;
@@ -1123,7 +1141,8 @@ $(window).on(&quot;resize&quot;, function() {
 }).trigger(&quot;resize&quot;);
 //这里的trigger是加载一面是强制行的就刷新一次
 </code></pre><p>   6、存储</p>
-<pre><code>1. sessionStorage约5M，localStorage约20M，只能存储字符串，对于对象，使用 JSON.stringify()编码成字符串后存储。
+<pre><code>1. sessionStorage约5M，localStorage约20M，只能存储字符串，对于对象，使用 
+JSON.stringify()编码成字符串后存储。
 2. window.sessionStorage
     1、生命周期为关闭浏览器窗口
     2、在同一个窗口下数据可以共享
